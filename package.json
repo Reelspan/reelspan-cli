@@ -1,0 +1,59 @@
+{
+  "name": "@reelspan/cli",
+  "version": "0.1.0",
+  "description": "Reelspan from the terminal: publish videos, photos and text to TikTok, YouTube, Instagram, X, LinkedIn and 17 more networks; schedule, retry and read analytics. Built for scripts and AI agents too.",
+  "license": "MIT",
+  "author": "Anjum Labs <support@reelspan.com>",
+  "homepage": "https://reelspan.com/docs/cli",
+  "bugs": {
+    "url": "https://github.com/Reelspan/reelspan-cli/issues",
+    "email": "support@reelspan.com"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "reelspan": "dist/reelspan.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "reelspan",
+    "cli",
+    "social media",
+    "publishing",
+    "scheduling",
+    "tiktok",
+    "youtube",
+    "instagram",
+    "linkedin",
+    "x",
+    "bluesky",
+    "upload-post"
+  ],
+  "scripts": {
+    "build": "tsc --noEmit && esbuild src/bin.ts --bundle --platform=node --format=esm --target=node20 --outfile=dist/reelspan.js --banner:js=\"import { createRequire as __cr } from 'node:module'; const require = __cr(import.meta.url);\" && esbuild src/cli.ts --bundle --platform=node --format=esm --target=node20 --outfile=dist/cli.js --banner:js=\"import { createRequire as __cr } from 'node:module'; const require = __cr(import.meta.url);\"",
+    "test": "npm run build && node --test test/cli.test.mjs",
+    "prepublishOnly": "npm test"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.0",
+    "commander": "^14.0.0",
+    "esbuild": "^0.25.0",
+    "reelspan": "github:Reelspan/reelspan-node#cc5ceabe0aa3dd633b546f6a0a2132c4efded09f",
+    "typescript": "^5.9.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Reelspan/reelspan-cli.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}
