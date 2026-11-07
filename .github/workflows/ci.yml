@@ -19,9 +19,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm test
-      - name: Versions agree
-        run: |
-          v=$(node -p "require('./package.json').version")
-          test "$(node -p "require('./server.json').version")" = "$v"
-          test "$(node -p "require('./server.json').packages[0].version")" = "$v"
-          grep -q "VERSION = '$v'" src/proxy.ts
+      - name: Version agrees
+        run: grep -q "VERSION = '$(node -p "require('./package.json').version")'" src/cli.ts
+      - name: The bundled bin runs
+        run: node dist/reelspan.js --version
