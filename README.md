@@ -1,7 +1,7 @@
 # @reelspan/cli
 
 [Reelspan](https://reelspan.com) from the terminal. Publish videos, photos and text to TikTok, YouTube, Instagram,
-Facebook, X, Threads, LinkedIn, Pinterest, Bluesky, Reddit and 12 more networks, schedule them, retry the failures and
+Facebook, X, Threads, LinkedIn, Pinterest, Bluesky, Reddit and more, schedule them, retry the failures and
 read how they did. It works the same for you, a shell script, a CI job or an AI agent.
 
 ```bash

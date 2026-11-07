@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// reelspan: publish to 22 social networks from the terminal, a script or an AI agent.
+// reelspan: publish to every major social network from the terminal, a script or an AI agent.
 import { Command, Option } from 'commander';
 import { readFile, stat } from 'node:fs/promises';
 import { basename, extname } from 'node:path';
@@ -83,7 +83,7 @@ export function buildProgram(io: Io) {
   const program = new Command();
   program
     .name('reelspan')
-    .description('Publish videos, photos and text to TikTok, YouTube, Instagram, X, LinkedIn and 17 more networks.')
+    .description('Publish videos, photos and text to TikTok, YouTube, Instagram, X, LinkedIn and more.')
     .version(VERSION)
     .option('--json', 'machine-readable output (the API answer as JSON)')
     .option('--api-key <key>', 'API key (default: REELSPAN_API_KEY, then `reelspan login`)')

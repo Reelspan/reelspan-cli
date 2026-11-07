@@ -1,7 +1,7 @@
 {
   "name": "@reelspan/cli",
   "version": "0.1.0",
-  "description": "Reelspan from the terminal: publish videos, photos and text to TikTok, YouTube, Instagram, X, LinkedIn and 17 more networks; schedule, retry and read analytics. Built for scripts and AI agents too.",
+  "description": "Reelspan from the terminal: publish videos, photos and text to TikTok, YouTube, Instagram, X, LinkedIn and more; schedule, retry and read analytics. Built for scripts and AI agents too.",
   "license": "MIT",
   "author": "Anjum Labs <support@reelspan.com>",
   "homepage": "https://reelspan.com/docs/cli",
